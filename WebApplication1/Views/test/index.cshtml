@@ -1,0 +1,126 @@
+﻿@model test;
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Invitation</title>
+    <link rel="stylesheet" href="~/css/styles.css" />
+    <style>
+        /* Romantic Styling */
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(to bottom right, #ffebf0, #ffe0f0);
+            color: #5d3a3a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            padding: 30px;
+            max-width: 500px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #b34060;
+            margin: 0;
+        }
+
+        p {
+            font-size: 1.3em;
+            color: #5d3a3a;
+            margin-top: 20px;
+        }
+
+        .heart {
+            font-size: 1.8em;
+            color: #ff5e78;
+            animation: pulse 1.5s infinite;
+        }
+
+        @@keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        button {
+            background-color: #ff5e78;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 1em;
+            margin-top: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s;
+        }
+
+            button:hover {
+                background-color: #e05568;
+            }
+    </style>
+    <style>
+        /* Improved Button Styling */
+        .button, .button1 {
+            display: inline-block;
+            background-color: #ff5e78;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1.2em;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            margin: 10px;
+        }
+
+            .button:hover, .button1:hover {
+                background-color: #e05568;
+                transform: translateY(-3px); /* Adds a slight lift effect */
+            }
+
+            .button:active, .button1:active {
+                transform: translateY(1px); /* Adds a pressed effect */
+            }
+
+        .button1 {
+            background-color: #c8c8c8; /* Grey color for "No" button */
+        }
+
+            .button1:hover {
+                background-color: #a5a5a5;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hello Mariam pipia , I am @Model.name <span class="heart">❤</span></h1>
+        <p>Would you like to join me for a magical evening under the stars?</p>
+        <a href="/test/ConfirmationPage" class="button">Yes, I’d love to!</a>
+        <a href="/test/NoConfirmationPage" class="button1">No, I woudn't!</a>
+        
+    </div>
+</body>
+</html>

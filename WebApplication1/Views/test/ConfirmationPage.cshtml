@@ -1,0 +1,81 @@
+﻿@{
+    ViewData["Title"] = "Confirmation";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <style>
+        /* Romantic Styling */
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(to bottom right, #ffdee9, #b5fffc);
+            color: #5d3a3a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.85);
+            border-radius: 15px;
+            padding: 30px;
+            max-width: 500px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #b34060;
+            margin: 0;
+            animation: fadeIn 2s ease-in;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #5d3a3a;
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+
+        .heart {
+            color: #ff5e78;
+            font-size: 1.5em;
+            margin: 10px 0;
+            animation: pulse 1.5s infinite;
+        }
+
+        /* Fade-in effect */
+        @@keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Heart pulse animation */
+        @@keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>I’m so happy you accepted! <span class="heart">❤</span></h1>
+        <p>Looking forward to our wonderful evening together, full of laughter, joy, and memorable moments. You’ve made my day brighter!</p>
+    </div>
+</body>
+</html>
